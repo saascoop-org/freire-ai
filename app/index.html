@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FreireAI Literacy Companion</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="../images/FreireIA_logo.jpeg" alt="FreireAI">
+        <div>
+          <strong>FreireAI</strong>
+          <span data-i18n="brandSubtitle">Companheiro de alfabetização dialógica</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <label class="language-picker" for="idioma">
+          <span data-i18n="languageLabel">Idioma</span>
+          <select id="idioma" aria-label="Idioma">
+            <option value="pt-BR">PT-BR</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+        </label>
+        <nav class="tabs" aria-label="Áreas do protótipo" data-i18n-attr="aria-label:tabsLabel">
+          <button class="tab is-active" data-view="mapa" data-i18n="tabMap">Mapa</button>
+          <button class="tab" data-view="codifica" data-i18n="tabCodify">Codificar</button>
+          <button class="tab" data-view="pergunta" data-i18n="tabQuestion">Perguntar</button>
+          <button class="tab" data-view="escuta" data-i18n="tabListening">Escuta</button>
+          <button class="tab" data-view="circulo" data-i18n="tabCircle">Círculo</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace">
+        <aside class="input-panel">
+          <label for="contexto" data-i18n="classContextLabel">Contexto da turma</label>
+          <input id="contexto" value="Turma de alfabetização de jovens e adultos em território urbano">
+
+          <label for="amostras" data-i18n="samplesLabel">Amostras de fala, escrita ou transcrição</label>
+          <textarea id="amostras" rows="16">Maria: Eu pego dois ônibus para chegar no trabalho e fico pensando no preço da passagem.
+João: No mercado tudo aumentou, mas meu salário não acompanha. Como a gente calcula isso?
+Ana: Quero escrever uma carta para pedir melhoria na rua, porque quando chove a água entra em casa.
+Carlos: Meu filho me ajuda no celular, mas eu quero aprender a ler as mensagens sozinho.
+Lia: A escola podia falar mais do nosso bairro, da feira, do posto de saúde e do trabalho.</textarea>
+
+          <button id="analisar" class="primary" data-i18n="analyzeButton">Analisar universo</button>
+          <p id="status-analise" class="status" role="status" aria-live="polite"></p>
+          <label for="modo-ia" data-i18n="aiModeLabel">Motor de IA</label>
+          <select id="modo-ia">
+            <option value="local" data-i18n="aiModeLocal">Local demonstrativo</option>
+            <option value="gemma" data-i18n="aiModeGemma">Gemma via API</option>
+          </select>
+          <p id="status-ia" class="status compact" role="status" aria-live="polite"></p>
+          <section class="usage-panel" aria-labelledby="usage-title">
+            <h2 id="usage-title" data-i18n="usageTitle">Uso do Gemma</h2>
+            <div class="usage-row">
+              <span data-i18n="usageModel">Modelo</span>
+              <strong id="usage-model">-</strong>
+            </div>
+            <div class="usage-row">
+              <span data-i18n="usageCalls">Chamadas</span>
+              <strong id="usage-calls">0</strong>
+            </div>
+            <div class="usage-row">
+              <span data-i18n="usageInputTokens">Tokens entrada</span>
+              <strong id="usage-input">0</strong>
+            </div>
+            <div class="usage-row">
+              <span data-i18n="usageOutputTokens">Tokens saída</span>
+              <strong id="usage-output">0</strong>
+            </div>
+            <div class="usage-row">
+              <span data-i18n="usageTotalTokens">Tokens totais</span>
+              <strong id="usage-total">0</strong>
+            </div>
+            <div class="usage-row">
+              <span data-i18n="usageSpent">Estimado usado</span>
+              <strong id="usage-spent">R$ 0,00</strong>
+            </div>
+            <div class="usage-row">
+              <span data-i18n="usageRemaining">Estimado restante</span>
+              <strong id="usage-remaining">-</strong>
+            </div>
+            <p class="usage-note" data-i18n="usageNote">Estimativa local baseada nos tokens retornados pela API e nas taxas configuradas.</p>
+          </section>
+          <button id="exportar" class="secondary" data-i18n="exportButton">Exportar registros</button>
+          <p id="status-exportacao" class="status compact" role="status" aria-live="polite"></p>
+          <p class="hint" data-i18n="draftHint">Rascunhos gerados localmente para revisão do educador.</p>
+        </aside>
+
+        <section class="view is-visible" id="view-mapa" aria-labelledby="mapa-title">
+          <div class="section-heading">
+            <p data-i18n="mapEyebrow">1. Universo vocabular e temático</p>
+            <h1 id="mapa-title" data-i18n="mapTitle">Escutar antes de propor</h1>
+          </div>
+          <div class="next-step">
+            <div>
+              <span class="step-badge" data-i18n="stepOneBadge">Passo 1 de 5</span>
+              <strong data-i18n="mapNextTitle">Revise o mapa gerado</strong>
+              <p data-i18n="mapNextBody">Confira as palavras e temas. Quando fizerem sentido para a turma, avance para criar uma codificação da realidade.</p>
+            </div>
+            <button class="secondary next-action" data-next-view="codifica" data-i18n="mapNextButton">Criar codificação</button>
+          </div>
+          <div class="grid two">
+            <article class="panel">
+              <h2 data-i18n="generativeWordsTitle">Palavras geradoras candidatas</h2>
+              <div id="palavras" class="chip-list"></div>
+            </article>
+            <article class="panel">
+              <h2 data-i18n="emergingThemesTitle">Temas emergentes</h2>
+              <div id="temas" class="stack"></div>
+            </article>
+          </div>
+          <article class="panel full">
+            <h2 data-i18n="educatorQuestionsTitle">Perguntas para o educador</h2>
+            <ul id="perguntas-educador"></ul>
+          </article>
+        </section>
+
+        <section class="view" id="view-codifica" aria-labelledby="codifica-title">
+          <div class="section-heading">
+            <p data-i18n="codifyEyebrow">2. Codificações da realidade</p>
+            <h1 id="codifica-title" data-i18n="codifyTitle">Transformar tema em cena discutível</h1>
+          </div>
+          <div class="next-step">
+            <div>
+              <span class="step-badge" data-i18n="stepTwoBadge">Passo 2 de 5</span>
+              <strong data-i18n="codifyNextTitle">Escolha tema e formato</strong>
+              <p data-i18n="codifyNextBody">Gere um rascunho e observe se ele abre conversa em vez de encerrar a resposta.</p>
+            </div>
+            <button class="secondary next-action" data-next-view="pergunta" data-i18n="codifyNextButton">Próximo: testar perguntas</button>
+          </div>
+          <div class="toolbar">
+            <select id="tema-codificacao" aria-label="Tema para codificação" data-i18n-attr="aria-label:themeSelectLabel"></select>
+            <select id="formato-codificacao" aria-label="Formato" data-i18n-attr="aria-label:formatSelectLabel">
+              <option value="historia" data-i18n="formatStory">História curta</option>
+              <option value="imagem" data-i18n="formatImage">Prompt de imagem</option>
+              <option value="dialogo" data-i18n="formatDialogue">Cena dialogada</option>
+            </select>
+            <button id="gerar-codificacao" class="primary" data-i18n="generateDraftButton">Gerar rascunho</button>
+          </div>
+          <p id="status-codificacao" class="status compact" role="status" aria-live="polite"></p>
+          <article class="panel full" id="codificacao-panel">
+            <h2 id="codificacao-titulo">Codificacao</h2>
+            <p id="codificacao-texto"></p>
+          </article>
+          <article class="panel full">
+            <h2 data-i18n="decodingQuestionsTitle">Perguntas de decodificação</h2>
+            <ul id="decodificacao"></ul>
+          </article>
+        </section>
+
+        <section class="view" id="view-pergunta" aria-labelledby="pergunta-title">
+          <div class="section-heading">
+            <p data-i18n="questionEyebrow">3. Pedagogia da pergunta</p>
+            <h1 id="pergunta-title" data-i18n="questionTitle">Responder perguntando melhor</h1>
+          </div>
+          <div class="next-step">
+            <div>
+              <span class="step-badge" data-i18n="stepThreeBadge">Passo 3 de 5</span>
+              <strong data-i18n="questionNextTitle">Simule uma pergunta real</strong>
+              <p data-i18n="questionNextBody">A resposta deve devolver investigação ao estudante, não entregar uma conclusão pronta.</p>
+            </div>
+            <button class="secondary next-action" data-next-view="escuta" data-i18n="questionNextButton">Ver escuta ativa</button>
+          </div>
+          <div class="question-box">
+            <label for="duvida" data-i18n="learnerQuestionLabel">Pergunta do estudante</label>
+            <input id="duvida" value="Por que a passagem aumenta se o ônibus continua cheio?">
+            <button id="responder" class="primary" data-i18n="simulateAnswerButton">Simular resposta</button>
+          </div>
+          <p id="status-resposta" class="status compact" role="status" aria-live="polite"></p>
+          <article class="panel full" id="resposta-panel">
+            <h2 data-i18n="studentAnswerTitle">Resposta ao estudante</h2>
+            <p id="resposta-estudante"></p>
+          </article>
+          <article class="panel full" id="nota-panel">
+            <h2 data-i18n="educatorNoteTitle">Nota ao educador</h2>
+            <p id="nota-educador"></p>
+          </article>
+        </section>
+
+        <section class="view" id="view-escuta" aria-labelledby="escuta-title">
+          <div class="section-heading">
+            <p data-i18n="listeningEyebrow">4. Dashboard de escuta ativa</p>
+            <h1 id="escuta-title" data-i18n="listeningTitle">Evidências para planejar a aula</h1>
+          </div>
+          <div class="next-step">
+            <div>
+              <span class="step-badge" data-i18n="stepFourBadge">Passo 4 de 5</span>
+              <strong data-i18n="listeningNextTitle">Planeje a intervenção</strong>
+              <p data-i18n="listeningNextBody">Use a síntese como apoio para decidir a próxima atividade com a turma.</p>
+            </div>
+            <button class="secondary next-action" data-next-view="circulo" data-i18n="listeningNextButton">Montar círculo</button>
+          </div>
+          <div class="grid three">
+            <article class="metric">
+              <span id="metric-palavras">0</span>
+              <p data-i18n="candidateWordsMetric">palavras candidatas</p>
+            </article>
+            <article class="metric">
+              <span id="metric-temas">0</span>
+              <p data-i18n="emergingThemesMetric">temas emergentes</p>
+            </article>
+            <article class="metric">
+              <span id="metric-vozes">0</span>
+              <p data-i18n="voicesMetric">vozes registradas</p>
+            </article>
+          </div>
+          <article class="panel full">
+            <h2 data-i18n="listeningSummaryTitle">Síntese de escuta</h2>
+            <p id="sintese-escuta"></p>
+          </article>
+          <article class="panel full">
+            <h2 data-i18n="suggestedActionsTitle">Ações sugeridas</h2>
+            <ul id="acoes"></ul>
+          </article>
+        </section>
+
+        <section class="view" id="view-circulo" aria-labelledby="circulo-title">
+          <div class="section-heading">
+            <p data-i18n="circleEyebrow">5. Círculo de cultura digital</p>
+            <h1 id="circulo-title" data-i18n="circleTitle">Aprender em comunhão</h1>
+          </div>
+          <div class="next-step">
+            <div>
+              <span class="step-badge" data-i18n="stepFiveBadge">Passo 5 de 5</span>
+              <strong data-i18n="circleNextTitle">Leve para a prática</strong>
+              <p data-i18n="circleNextBody">Revise a proposta, ajuste com sua leitura da turma e reinicie o ciclo com novas falas depois da atividade.</p>
+            </div>
+            <button class="secondary next-action" data-next-view="mapa" data-i18n="circleNextButton">Reiniciar ciclo</button>
+          </div>
+          <article class="panel full">
+            <h2 data-i18n="circleProposalTitle">Proposta de círculo</h2>
+            <p id="prompt-circulo"></p>
+          </article>
+          <div class="grid two">
+            <article class="panel">
+              <h2 data-i18n="participationBalanceTitle">Equilíbrio de participação</h2>
+              <p id="participacao"></p>
+            </article>
+            <article class="panel">
+              <h2 data-i18n="peerPairsTitle">Pares colaborativos</h2>
+              <ul id="pares"></ul>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
