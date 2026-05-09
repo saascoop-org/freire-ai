@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: freireai-literacy-companion-pilot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: GEMMA_API_KEY
+        sync: false
+      - key: GEMMA_API_BASE
+        value: https://generativelanguage.googleapis.com/v1beta
+      - key: GEMMA_MODEL
+        value: gemma-4-26b-a4b-it
+      - key: GEMMA_BUDGET_BRL
+        value: "10.00"
+      - key: GEMMA_INPUT_BRL_PER_1M_TOKENS
+        value: "0.40"
+      - key: GEMMA_OUTPUT_BRL_PER_1M_TOKENS
+        value: "1.75"

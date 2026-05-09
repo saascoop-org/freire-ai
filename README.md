@@ -36,6 +36,26 @@ http://localhost:8080
 
 In the side panel, change `AI engine` / `Motor de IA` to `Gemma via API`.
 
+## Deploy on Render
+
+This repository includes a Render Blueprint in `render.yaml` for a Node web service.
+
+In Render, create a new Blueprint from this GitHub repository and select the branch you want to deploy. Render will use:
+
+```text
+Build command: npm install
+Start command: npm start
+Health check path: /
+```
+
+During the first Blueprint setup, provide the secret value for:
+
+```text
+GEMMA_API_KEY
+```
+
+The non-secret Gemma defaults are defined in `render.yaml`. Render provides the runtime `PORT` automatically, and `server.mjs` binds to `process.env.PORT`.
+
 ## Environment
 
 The backend defaults to Google AI Studio / Google Generative Language API:
