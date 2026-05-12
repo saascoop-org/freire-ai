@@ -58,11 +58,17 @@ Confirm:
 
 ## 4. Submission Package
 
+Public demo URL:
+
+```text
+https://freireai-literacy-companion-pilot.onrender.com/
+```
+
 Confirm the final submission includes:
 
 - Kaggle writeup based on `specs/freireai/hackathon-submission.md`.
 - Demo video from `videos/`.
 - Public repository URL.
-- Public or local demo instructions.
+- Public demo URL and local demo instructions.
 - Screenshots from `images/`.
 - One validation summary from `specs/freireai/validation-log.md`.

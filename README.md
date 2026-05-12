@@ -18,6 +18,12 @@ The app also keeps a local deterministic fallback so the demo works even without
 
 ## Current Prototype
 
+Public demo:
+
+```text
+https://freireai-literacy-companion-pilot.onrender.com/
+```
+
 Open `app/index.html` directly for the local static MVP.
 
 For Gemma mode, run the optional backend:
@@ -39,6 +45,12 @@ In the side panel, change `AI engine` / `Motor de IA` to `Gemma via API`.
 ## Deploy on Render
 
 This repository includes a Render Blueprint in `render.yaml` for a Node web service.
+
+The current public Render deployment is:
+
+```text
+https://freireai-literacy-companion-pilot.onrender.com/
+```
 
 In Render, create a new Blueprint from this GitHub repository and select the branch you want to deploy. Render will use:
 

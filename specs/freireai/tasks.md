@@ -36,7 +36,7 @@
 - [x] Create external feedback form from `specs/freireai/feedback-form-template.md`.
 - [ ] Record at least one invited validation session in `specs/freireai/validation-log.md`.
 - [ ] Complete `specs/freireai/public-release-check.md`.
-- [ ] Deploy public demo URL.
+- [x] Deploy public demo URL.
 - [ ] Publish repository and connect demo/video/write-up for hackathon submission.
 
 ## Phase 4 - Learning Evidence

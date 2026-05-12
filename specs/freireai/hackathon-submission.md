@@ -57,6 +57,8 @@ The project targets literacy as civic participation. Learners can work with word
 
 ## Demo Flow
 
+Public demo: https://freireai-literacy-companion-pilot.onrender.com/
+
 1. Open the app.
 2. Select language.
 3. Choose local mode or Gemma mode.
@@ -84,7 +86,6 @@ The invited validation feedback forms are available in three languages:
 
 ## Remaining Pilot Work
 
-- Deploy public demo.
 - Add automated evaluation prompts for AI contract compliance.
 - Add hosted Gemma provider configuration.
 - Run a small educator feedback cycle.
