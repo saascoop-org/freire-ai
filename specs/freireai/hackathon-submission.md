@@ -57,7 +57,7 @@ The project targets literacy as civic participation. Learners can work with word
 
 ## Demo Flow
 
-Public landing page: https://freireai-literacy-companion-pilot.onrender.com/
+Public landing page: https://hackathonbrteam.github.io/FreireAI-Literacy-Companion-Pilot/
 
 Interactive demo: https://freireai-literacy-companion-pilot.onrender.com/demo
 

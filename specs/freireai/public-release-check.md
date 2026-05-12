@@ -61,7 +61,7 @@ Confirm:
 Public demo URL:
 
 ```text
-https://freireai-literacy-companion-pilot.onrender.com/
+https://hackathonbrteam.github.io/FreireAI-Literacy-Companion-Pilot/
 ```
 
 Confirm the final submission includes:

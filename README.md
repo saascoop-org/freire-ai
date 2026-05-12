@@ -18,10 +18,10 @@ The app also keeps a local deterministic fallback so the demo works even without
 
 ## Current Prototype
 
-Public demo:
+Public landing page:
 
 ```text
-https://freireai-literacy-companion-pilot.onrender.com/
+https://hackathonbrteam.github.io/FreireAI-Literacy-Companion-Pilot/
 ```
 
 The interactive prototype is available from the landing page or directly at:
@@ -54,10 +54,10 @@ In the side panel, change `AI engine` / `Motor de IA` to `Gemma via API`.
 
 This repository includes a Render Blueprint in `render.yaml` for a Node web service.
 
-The current public Render deployment is:
+The current public Render deployment hosts the interactive prototype and Gemma API gateway:
 
 ```text
-https://freireai-literacy-companion-pilot.onrender.com/
+https://freireai-literacy-companion-pilot.onrender.com/demo
 ```
 
 In Render, create a new Blueprint from this GitHub repository and select the branch you want to deploy. Render will use:
@@ -75,6 +75,16 @@ GEMMA_API_KEY
 ```
 
 The non-secret Gemma defaults are defined in `render.yaml`. Render provides the runtime `PORT` automatically, and `server.mjs` binds to `process.env.PORT`.
+
+## Landing Page on GitHub Pages
+
+The trilingual landing page is published from the `docs/` folder through GitHub Pages:
+
+```text
+https://hackathonbrteam.github.io/FreireAI-Literacy-Companion-Pilot/
+```
+
+The landing page links to the interactive Render demo at `/demo`.
 
 ## Environment
 
