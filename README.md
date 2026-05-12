@@ -24,6 +24,12 @@ Public demo:
 https://freireai-literacy-companion-pilot.onrender.com/
 ```
 
+The interactive prototype is available from the landing page or directly at:
+
+```text
+https://freireai-literacy-companion-pilot.onrender.com/demo
+```
+
 Open `app/index.html` directly for the local static MVP.
 
 For Gemma mode, run the optional backend:
@@ -39,6 +45,8 @@ Then open:
 ```text
 http://localhost:8080
 ```
+
+The landing page is served at `/`, and the interactive prototype is served at `/demo`.
 
 In the side panel, change `AI engine` / `Motor de IA` to `Gemma via API`.
 

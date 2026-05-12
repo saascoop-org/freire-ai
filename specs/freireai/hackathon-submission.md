@@ -57,7 +57,9 @@ The project targets literacy as civic participation. Learners can work with word
 
 ## Demo Flow
 
-Public demo: https://freireai-literacy-companion-pilot.onrender.com/
+Public landing page: https://freireai-literacy-companion-pilot.onrender.com/
+
+Interactive demo: https://freireai-literacy-companion-pilot.onrender.com/demo
 
 1. Open the app.
 2. Select language.

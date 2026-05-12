@@ -289,7 +289,9 @@ async function handleGoogleGemma(response, prompt, body) {
 
 async function serveStatic(request, response) {
   const url = new URL(request.url, `http://${request.headers.host}`);
-  const requestedPath = url.pathname === "/" ? "index.html" : decodeURIComponent(url.pathname).replace(/^\/+/, "");
+  let requestedPath = decodeURIComponent(url.pathname).replace(/^\/+/, "");
+  if (url.pathname === "/") requestedPath = "landing.html";
+  if (url.pathname === "/demo" || url.pathname === "/demo/") requestedPath = "index.html";
   const safePath = normalize(requestedPath).replace(/^(\.\.[/\\])+/, "");
   const firstSegment = safePath.split(/[\\/]/, 1)[0];
   const base = firstSegment === "images" || firstSegment === "videos" ? root : appRoot;
