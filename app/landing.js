@@ -252,30 +252,30 @@ const screenshots = {
     main: "../images/screenshot-PT-BR-1.png",
     screens: [
       "../images/screenshot-PT-BR-1.png",
-      "../images/screenshot-PT-BR-2.png",
       "../images/screenshot-PT-BR-3.png",
-      "../images/screenshot-PT-BR-4.png",
-      "../images/screenshot-PT-BR-5.png"
+      "../images/screenshot-PT-BR-5.png",
+      "../images/screenshot-PT-BR-7.png",
+      "../images/screenshot-PT-BR-9.png"
     ]
   },
   en: {
     main: "../images/screenshot-EN-1.png",
     screens: [
       "../images/screenshot-EN-1.png",
-      "../images/screenshot-EN-2.png",
       "../images/screenshot-EN-3.png",
-      "../images/screenshot-EN-4.png",
-      "../images/screenshot-EN-5.png"
+      "../images/screenshot-EN-5.png",
+      "../images/screenshot-EN-7.png",
+      "../images/screenshot-EN-9.png"
     ]
   },
   es: {
     main: "../images/screenshot-ES-1.png",
     screens: [
       "../images/screenshot-ES-1.png",
-      "../images/screenshot-ES-2.png",
       "../images/screenshot-ES-3.png",
-      "../images/screenshot-ES-4.png",
-      "../images/screenshot-ES-5.png"
+      "../images/screenshot-ES-5.png",
+      "../images/screenshot-ES-7.png",
+      "../images/screenshot-ES-9.png"
     ]
   }
 };

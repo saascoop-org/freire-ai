@@ -252,30 +252,30 @@ const screenshots = {
     main: "assets/screenshot-PT-BR-1.png",
     screens: [
       "assets/screenshot-PT-BR-1.png",
-      "assets/screenshot-PT-BR-2.png",
       "assets/screenshot-PT-BR-3.png",
-      "assets/screenshot-PT-BR-4.png",
-      "assets/screenshot-PT-BR-5.png"
+      "assets/screenshot-PT-BR-5.png",
+      "assets/screenshot-PT-BR-7.png",
+      "assets/screenshot-PT-BR-9.png"
     ]
   },
   en: {
     main: "assets/screenshot-EN-1.png",
     screens: [
       "assets/screenshot-EN-1.png",
-      "assets/screenshot-EN-2.png",
       "assets/screenshot-EN-3.png",
-      "assets/screenshot-EN-4.png",
-      "assets/screenshot-EN-5.png"
+      "assets/screenshot-EN-5.png",
+      "assets/screenshot-EN-7.png",
+      "assets/screenshot-EN-9.png"
     ]
   },
   es: {
     main: "assets/screenshot-ES-1.png",
     screens: [
       "assets/screenshot-ES-1.png",
-      "assets/screenshot-ES-2.png",
       "assets/screenshot-ES-3.png",
-      "assets/screenshot-ES-4.png",
-      "assets/screenshot-ES-5.png"
+      "assets/screenshot-ES-5.png",
+      "assets/screenshot-ES-7.png",
+      "assets/screenshot-ES-9.png"
     ]
   }
 };
