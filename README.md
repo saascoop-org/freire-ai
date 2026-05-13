@@ -84,7 +84,11 @@ The trilingual landing page is published from the `docs/` folder through GitHub 
 https://hackathonbrteam.github.io/FreireAI-Literacy-Companion-Pilot/
 ```
 
-The landing page links to the interactive Render demo at `/demo`.
+The landing page links to the interactive Render demo at:
+
+```text
+https://freireai-literacy-companion-pilot.onrender.com/demo
+```
 
 ## Environment
 
