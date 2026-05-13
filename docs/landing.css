@@ -9,6 +9,7 @@
   --red: #b7422e;
   --gold: #c28a22;
   --blue: #346a8c;
+  --hero-image: url("assets/screenshot-EN-1.png");
   --shadow: 0 18px 42px rgba(34, 45, 38, 0.14);
 }
 
@@ -110,7 +111,7 @@ select {
   padding: clamp(38px, 6vw, 82px) clamp(20px, 5vw, 72px);
   background:
     linear-gradient(90deg, rgba(23, 33, 27, 0.82), rgba(23, 33, 27, 0.54) 48%, rgba(23, 33, 27, 0.06)),
-    url("assets/screenshot-PT-BR-1.png") center / cover;
+    var(--hero-image) center / cover;
 }
 
 .hero-copy {
@@ -296,6 +297,60 @@ select {
   font-size: 0.92rem;
 }
 
+.interface-section {
+  background: #fff;
+}
+
+.interface-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.interface-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.interface-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  background: #e9eee9;
+  border-right: 1px solid var(--line);
+}
+
+.interface-card div {
+  padding: 22px 22px 22px 0;
+}
+
+.interface-card span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.interface-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.interface-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
 .video-panel {
   position: relative;
   overflow: hidden;
@@ -397,7 +452,7 @@ select {
     padding-bottom: 78px;
     background:
       linear-gradient(180deg, rgba(23, 33, 27, 0.88), rgba(23, 33, 27, 0.66)),
-      url("assets/screenshot-PT-BR-1.png") center / cover;
+      var(--hero-image) center / cover;
   }
 
   .impact-strip,
@@ -408,6 +463,19 @@ select {
 
   .site-footer {
     display: grid;
+  }
+
+  .interface-card {
+    grid-template-columns: 1fr;
+  }
+
+  .interface-card img {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .interface-card div {
+    padding: 0 18px 20px;
   }
 }
 

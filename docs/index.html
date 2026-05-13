@@ -15,6 +15,7 @@
       </a>
       <nav class="site-nav" aria-label="Landing navigation">
         <a href="#method" data-i18n="navMethod">Method</a>
+        <a href="#interface" data-i18n="navInterface">Interface</a>
         <a href="#videos" data-i18n="navVideos">Videos</a>
         <a href="#feedback" data-i18n="navFeedback">Feedback</a>
       </nav>
@@ -104,9 +105,59 @@
           </p>
         </div>
         <figure class="screenshot-frame">
-          <img src="assets/screenshot-PT-BR-1.png" alt="FreireAI prototype interface screenshot">
+          <img id="main-screenshot" src="assets/screenshot-EN-1.png" alt="FreireAI prototype interface screenshot">
           <figcaption data-i18n="screenshotCaption">Prototype interface: theme mapping and educator-controlled workflow.</figcaption>
         </figure>
+      </section>
+
+      <section class="section interface-section" id="interface" aria-labelledby="interface-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="interfaceEyebrow">Interface walkthrough</p>
+          <h2 id="interface-title" data-i18n="interfaceTitle">How each screen works</h2>
+          <p data-i18n="interfaceIntro">The prototype follows the educator's workflow from listening to culture-circle planning.</p>
+        </div>
+        <div class="interface-grid">
+          <article class="interface-card">
+            <img id="screen-map-img" src="assets/screenshot-EN-1.png" alt="">
+            <div>
+              <span data-i18n="screenMapStep">Screen 1</span>
+              <h3 data-i18n="screenMapTitle">Vocabulary and theme map</h3>
+              <p data-i18n="screenMapBody">Educators paste learner speech, writing, or transcript fragments. FreireAI maps generative words, emerging themes, tensions, evidence, and questions for educator review.</p>
+            </div>
+          </article>
+          <article class="interface-card">
+            <img id="screen-codify-img" src="assets/screenshot-EN-2.png" alt="">
+            <div>
+              <span data-i18n="screenCodifyStep">Screen 2</span>
+              <h3 data-i18n="screenCodifyTitle">Reality codification</h3>
+              <p data-i18n="screenCodifyBody">The educator chooses a theme and format. The app drafts a story, image prompt, or dialogue scene designed to open discussion rather than provide a final answer.</p>
+            </div>
+          </article>
+          <article class="interface-card">
+            <img id="screen-question-img" src="assets/screenshot-EN-3.png" alt="">
+            <div>
+              <span data-i18n="screenQuestionStep">Screen 3</span>
+              <h3 data-i18n="screenQuestionTitle">Pedagogy of the question</h3>
+              <p data-i18n="screenQuestionBody">The educator simulates a learner question. FreireAI responds with inquiry-oriented prompts and a note that keeps interpretation in the educator's hands.</p>
+            </div>
+          </article>
+          <article class="interface-card">
+            <img id="screen-listening-img" src="assets/screenshot-EN-4.png" alt="">
+            <div>
+              <span data-i18n="screenListeningStep">Screen 4</span>
+              <h3 data-i18n="screenListeningTitle">Active listening dashboard</h3>
+              <p data-i18n="screenListeningBody">The dashboard summarizes words, themes, voices, listening evidence, and suggested educator actions for lesson planning.</p>
+            </div>
+          </article>
+          <article class="interface-card">
+            <img id="screen-circle-img" src="assets/screenshot-EN-5.png" alt="">
+            <div>
+              <span data-i18n="screenCircleStep">Screen 5</span>
+              <h3 data-i18n="screenCircleTitle">Digital culture circle</h3>
+              <p data-i18n="screenCircleBody">The final screen prepares a culture-circle proposal, participation balance notes, and peer collaboration ideas for the next classroom activity.</p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="section" id="videos" aria-labelledby="videos-title">
@@ -158,7 +209,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>FreireAI Literacy Companion Pilot</span>
+      <span data-i18n="footerAppName">FreireAI Literacy Companion Pilot</span>
       <a href="https://github.com/HackathonBrTeam/FreireAI-Literacy-Companion-Pilot" target="_blank" rel="noreferrer" data-i18n="repositoryLink">Repository</a>
     </footer>
 

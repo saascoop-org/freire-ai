@@ -1,11 +1,12 @@
 const content = {
   "pt-BR": {
     navMethod: "Método",
+    navInterface: "Interface",
     navVideos: "Vídeos",
     navFeedback: "Feedback",
     languageLabel: "Idioma",
     heroEyebrow: "Piloto Gemma 4 Good",
-    heroTitle: "FreireAI Literacy Companion",
+    heroTitle: "FreireAI Companheiro de Alfabetização",
     heroLede: "Um companheiro de IA trilíngue que ajuda educadores a escutar primeiro, criar propostas de alfabetização situadas e facilitar círculos de cultura digitais.",
     openDemo: "Abrir demo",
     watchVideos: "Ver vídeos",
@@ -32,6 +33,25 @@ const content = {
     evidenceTitle: "Uma demo funcional, não uma apresentação",
     evidenceIntro: "O app publicado inclui modo local, modo opcional com API Gemma, interface multilíngue e exportação em Markdown para registros do educador.",
     screenshotCaption: "Interface do protótipo: mapeamento temático e fluxo controlado pelo educador.",
+    screenshotAlt: "Captura de tela da interface do FreireAI em português",
+    interfaceEyebrow: "Percurso da interface",
+    interfaceTitle: "Como cada tela funciona",
+    interfaceIntro: "O protótipo acompanha o fluxo do educador desde a escuta inicial até o planejamento do círculo de cultura.",
+    screenMapStep: "Tela 1",
+    screenMapTitle: "Mapa vocabular e temático",
+    screenMapBody: "Educadores colam falas, escritas ou trechos de transcrição dos estudantes. O FreireAI mapeia palavras geradoras, temas emergentes, tensões, evidências e perguntas para revisão do educador.",
+    screenCodifyStep: "Tela 2",
+    screenCodifyTitle: "Codificação da realidade",
+    screenCodifyBody: "O educador escolhe tema e formato. O app rascunha uma história, prompt de imagem ou cena dialogada para abrir conversa, não entregar uma resposta final.",
+    screenQuestionStep: "Tela 3",
+    screenQuestionTitle: "Pedagogia da pergunta",
+    screenQuestionBody: "O educador simula uma pergunta do estudante. O FreireAI responde com provocações investigativas e uma nota que mantém a interpretação nas mãos do educador.",
+    screenListeningStep: "Tela 4",
+    screenListeningTitle: "Painel de escuta ativa",
+    screenListeningBody: "O painel sintetiza palavras, temas, vozes, evidências de escuta e ações sugeridas para apoiar o planejamento da aula.",
+    screenCircleStep: "Tela 5",
+    screenCircleTitle: "Círculo de cultura digital",
+    screenCircleBody: "A tela final prepara uma proposta de círculo, notas de equilíbrio de participação e ideias de colaboração entre pares para a próxima atividade.",
     videosEyebrow: "Vídeos",
     videosTitle: "Pitch e explicação do projeto",
     videosIntro: "Escolha o idioma mais confortável para você.",
@@ -43,10 +63,12 @@ const content = {
     feedbackIntro: "Use exemplos fictícios ou minimizados. Não inclua dados sensíveis de estudantes nos formulários de feedback.",
     finalEyebrow: "Pronto para explorar?",
     finalTitle: "Entre na demo do FreireAI",
+    footerAppName: "FreireAI Companheiro de Alfabetização - Piloto",
     repositoryLink: "Repositório"
   },
   en: {
     navMethod: "Method",
+    navInterface: "Interface",
     navVideos: "Videos",
     navFeedback: "Feedback",
     languageLabel: "Language",
@@ -78,6 +100,25 @@ const content = {
     evidenceTitle: "A working demo, not a slide deck",
     evidenceIntro: "The published app includes local fallback mode, optional Gemma API mode, multilingual UI, and Markdown export for educator records.",
     screenshotCaption: "Prototype interface: theme mapping and educator-controlled workflow.",
+    screenshotAlt: "FreireAI English interface screenshot",
+    interfaceEyebrow: "Interface walkthrough",
+    interfaceTitle: "How each screen works",
+    interfaceIntro: "The prototype follows the educator's workflow from listening to culture-circle planning.",
+    screenMapStep: "Screen 1",
+    screenMapTitle: "Vocabulary and theme map",
+    screenMapBody: "Educators paste learner speech, writing, or transcript fragments. FreireAI maps generative words, emerging themes, tensions, evidence, and questions for educator review.",
+    screenCodifyStep: "Screen 2",
+    screenCodifyTitle: "Reality codification",
+    screenCodifyBody: "The educator chooses a theme and format. The app drafts a story, image prompt, or dialogue scene designed to open discussion rather than provide a final answer.",
+    screenQuestionStep: "Screen 3",
+    screenQuestionTitle: "Pedagogy of the question",
+    screenQuestionBody: "The educator simulates a learner question. FreireAI responds with inquiry-oriented prompts and a note that keeps interpretation in the educator's hands.",
+    screenListeningStep: "Screen 4",
+    screenListeningTitle: "Active listening dashboard",
+    screenListeningBody: "The dashboard summarizes words, themes, voices, listening evidence, and suggested educator actions for lesson planning.",
+    screenCircleStep: "Screen 5",
+    screenCircleTitle: "Digital culture circle",
+    screenCircleBody: "The final screen prepares a culture-circle proposal, participation balance notes, and peer collaboration ideas for the next classroom activity.",
     videosEyebrow: "Videos",
     videosTitle: "Pitch and project walkthrough",
     videosIntro: "Choose the language that is most comfortable for you.",
@@ -89,15 +130,17 @@ const content = {
     feedbackIntro: "Please use fictional or minimized learner examples. Do not include sensitive learner data in feedback forms.",
     finalEyebrow: "Ready to explore?",
     finalTitle: "Enter the FreireAI demo",
+    footerAppName: "FreireAI Literacy Companion Pilot",
     repositoryLink: "Repository"
   },
   es: {
     navMethod: "Método",
+    navInterface: "Interfaz",
     navVideos: "Videos",
     navFeedback: "Comentarios",
     languageLabel: "Idioma",
     heroEyebrow: "Piloto Gemma 4 Good",
-    heroTitle: "FreireAI Literacy Companion",
+    heroTitle: "FreireAI Compañero de Alfabetización",
     heroLede: "Un compañero de IA trilingüe que ayuda a educadores a escuchar primero, crear propuestas de alfabetización situadas y facilitar círculos de cultura digitales.",
     openDemo: "Abrir demo",
     watchVideos: "Ver videos",
@@ -124,6 +167,25 @@ const content = {
     evidenceTitle: "Una demo funcional, no una presentación",
     evidenceIntro: "La app publicada incluye modo local, modo opcional con API Gemma, interfaz multilingüe y exportación Markdown para registros del educador.",
     screenshotCaption: "Interfaz del prototipo: mapeo temático y flujo controlado por el educador.",
+    screenshotAlt: "Captura de pantalla de la interfaz de FreireAI en español",
+    interfaceEyebrow: "Recorrido de la interfaz",
+    interfaceTitle: "Cómo funciona cada pantalla",
+    interfaceIntro: "El prototipo acompaña el flujo del educador desde la escucha inicial hasta la planificación del círculo de cultura.",
+    screenMapStep: "Pantalla 1",
+    screenMapTitle: "Mapa vocabular y temático",
+    screenMapBody: "Educadores pegan habla, escritura o fragmentos de transcripción de estudiantes. FreireAI mapea palabras generadoras, temas emergentes, tensiones, evidencias y preguntas para revisión del educador.",
+    screenCodifyStep: "Pantalla 2",
+    screenCodifyTitle: "Codificación de la realidad",
+    screenCodifyBody: "El educador elige tema y formato. La app redacta una historia, prompt de imagen o escena dialogada para abrir conversación, no para entregar una respuesta final.",
+    screenQuestionStep: "Pantalla 3",
+    screenQuestionTitle: "Pedagogía de la pregunta",
+    screenQuestionBody: "El educador simula una pregunta del estudiante. FreireAI responde con provocaciones investigativas y una nota que mantiene la interpretación en manos del educador.",
+    screenListeningStep: "Pantalla 4",
+    screenListeningTitle: "Panel de escucha activa",
+    screenListeningBody: "El panel sintetiza palabras, temas, voces, evidencias de escucha y acciones sugeridas para apoyar la planificación de la clase.",
+    screenCircleStep: "Pantalla 5",
+    screenCircleTitle: "Círculo de cultura digital",
+    screenCircleBody: "La pantalla final prepara una propuesta de círculo, notas de equilibrio de participación e ideas de colaboración entre pares para la próxima actividad.",
     videosEyebrow: "Videos",
     videosTitle: "Pitch y explicación del proyecto",
     videosIntro: "Elija el idioma más cómodo para usted.",
@@ -135,6 +197,7 @@ const content = {
     feedbackIntro: "Use ejemplos ficticios o minimizados. No incluya datos sensibles de estudiantes en los formularios de comentarios.",
     finalEyebrow: "¿Listo para explorar?",
     finalTitle: "Entre en la demo de FreireAI",
+    footerAppName: "FreireAI Compañero de Alfabetización - Piloto",
     repositoryLink: "Repositorio"
   }
 };
@@ -181,6 +244,39 @@ const videos = {
   }
 };
 
+const screenshots = {
+  "pt-BR": {
+    main: "../images/screenshot-PT-BR-1.png",
+    screens: [
+      "../images/screenshot-PT-BR-1.png",
+      "../images/screenshot-PT-BR-2.png",
+      "../images/screenshot-PT-BR-3.png",
+      "../images/screenshot-PT-BR-4.png",
+      "../images/screenshot-PT-BR-5.png"
+    ]
+  },
+  en: {
+    main: "../images/screenshot-EN-1.png",
+    screens: [
+      "../images/screenshot-EN-1.png",
+      "../images/screenshot-EN-2.png",
+      "../images/screenshot-EN-3.png",
+      "../images/screenshot-EN-4.png",
+      "../images/screenshot-EN-5.png"
+    ]
+  },
+  es: {
+    main: "../images/screenshot-ES-1.png",
+    screens: [
+      "../images/screenshot-ES-1.png",
+      "../images/screenshot-ES-2.png",
+      "../images/screenshot-ES-3.png",
+      "../images/screenshot-ES-4.png",
+      "../images/screenshot-ES-5.png"
+    ]
+  }
+};
+
 const DEFAULT_LANGUAGE = "en";
 const languageSelect = document.querySelector("#landing-language");
 
@@ -217,7 +313,9 @@ function preferredLanguage() {
 
 function setLanguage(language) {
   const nextLanguage = content[language] ? language : DEFAULT_LANGUAGE;
+  const nextContent = content[nextLanguage];
   document.documentElement.lang = nextLanguage;
+  document.title = nextContent.heroTitle;
   languageSelect.value = nextLanguage;
   try {
     localStorage.setItem("freireai-landing-language", nextLanguage);
@@ -226,10 +324,11 @@ function setLanguage(language) {
   }
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    element.textContent = content[nextLanguage][element.dataset.i18n];
+    element.textContent = nextContent[element.dataset.i18n];
   });
 
   renderVideos(nextLanguage);
+  renderScreenshots(nextLanguage);
 }
 
 function renderVideos(language) {
@@ -250,6 +349,30 @@ function renderVideos(language) {
   projectThumb.src = selectedVideos.project.thumbnail;
   projectThumb.alt = `${selectedVideos.project.title} video thumbnail - ${selectedVideos.label}`;
   projectMeta.textContent = selectedVideos.label;
+}
+
+function renderScreenshots(language) {
+  const selectedScreenshots = screenshots[language] || screenshots[DEFAULT_LANGUAGE];
+  const selectedContent = content[language] || content[DEFAULT_LANGUAGE];
+  const screenIds = [
+    "screen-map-img",
+    "screen-codify-img",
+    "screen-question-img",
+    "screen-listening-img",
+    "screen-circle-img"
+  ];
+
+  document.documentElement.style.setProperty("--hero-image", `url("${selectedScreenshots.main}")`);
+
+  const mainScreenshot = document.querySelector("#main-screenshot");
+  mainScreenshot.src = selectedScreenshots.main;
+  mainScreenshot.alt = selectedContent.screenshotAlt;
+
+  screenIds.forEach((id, index) => {
+    const image = document.querySelector(`#${id}`);
+    image.src = selectedScreenshots.screens[index];
+    image.alt = `${selectedContent.screenshotAlt} - ${index + 1}`;
+  });
 }
 
 function adjustDemoLinksForLocalFiles() {
