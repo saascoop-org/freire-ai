@@ -143,8 +143,7 @@ select {
 }
 
 .hero-actions,
-.feedback-actions,
-.link-row {
+.feedback-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -154,8 +153,7 @@ select {
   margin-top: 30px;
 }
 
-.button,
-.link-row a {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -173,8 +171,7 @@ select {
   color: #fff;
 }
 
-.button.secondary,
-.link-row a {
+.button.secondary {
   background: #fff;
   border-color: var(--green);
   color: var(--green);
@@ -236,7 +233,7 @@ select {
 .feature-grid,
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 16px;
 }
 
@@ -300,13 +297,57 @@ select {
 }
 
 .video-panel {
-  display: grid;
-  align-content: space-between;
-  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
 }
 
-.link-row a {
-  min-width: 86px;
+.video-card {
+  position: relative;
+  display: grid;
+  min-height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.video-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e9eee9;
+}
+
+.video-card h3 {
+  margin: 16px 18px 4px;
+}
+
+.video-card p {
+  margin: 0 18px 18px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.play-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 999px;
+  background: rgba(23, 33, 27, 0.88);
+  color: #fff;
+  padding: 0 12px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.video-card:hover h3,
+.video-card:focus-visible h3 {
+  color: var(--green);
 }
 
 .feedback {
@@ -387,8 +428,7 @@ select {
     font-size: 3rem;
   }
 
-  .button,
-  .link-row a {
+  .button {
     width: 100%;
   }
 }
