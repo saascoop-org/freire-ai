@@ -58,6 +58,7 @@ select {
   gap: 10px;
   text-decoration: none;
   font-weight: 850;
+  min-width: 0;
 }
 
 .brand img {
@@ -65,6 +66,14 @@ select {
   height: 42px;
   border-radius: 8px;
   object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.brand span {
+  max-width: min(340px, 32vw);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .site-nav {
@@ -485,7 +494,7 @@ select {
   }
 
   .brand span {
-    max-width: 110px;
+    max-width: 160px;
   }
 
   .language-control span {
