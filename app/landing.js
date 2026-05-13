@@ -124,29 +124,49 @@ const content = {
   }
 };
 
+const DEFAULT_LANGUAGE = "en";
 const languageSelect = document.querySelector("#landing-language");
 
-function preferredLanguage() {
-  const saved = localStorage.getItem("freireai-landing-language");
-  if (saved && content[saved]) return saved;
+function savedLanguage() {
+  try {
+    const saved = localStorage.getItem("freireai-landing-language");
+    return content[saved] ? saved : null;
+  } catch {
+    return null;
+  }
+}
 
-  const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language];
+function browserLanguage() {
+  const browserLanguages = [
+    ...(Array.isArray(navigator.languages) ? navigator.languages : []),
+    navigator.language,
+    navigator.userLanguage
+  ].filter(Boolean);
+
   const match = browserLanguages.find((language) => {
     const normalized = language.toLowerCase();
     return normalized.startsWith("pt") || normalized.startsWith("es") || normalized.startsWith("en");
   });
 
-  if (!match) return "en";
+  if (!match) return null;
   if (match.toLowerCase().startsWith("pt")) return "pt-BR";
   if (match.toLowerCase().startsWith("es")) return "es";
   return "en";
 }
 
+function preferredLanguage() {
+  return savedLanguage() || browserLanguage() || DEFAULT_LANGUAGE;
+}
+
 function setLanguage(language) {
-  const nextLanguage = content[language] ? language : "en";
+  const nextLanguage = content[language] ? language : DEFAULT_LANGUAGE;
   document.documentElement.lang = nextLanguage;
   languageSelect.value = nextLanguage;
-  localStorage.setItem("freireai-landing-language", nextLanguage);
+  try {
+    localStorage.setItem("freireai-landing-language", nextLanguage);
+  } catch {
+    // Language detection still works when storage is unavailable.
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = content[nextLanguage][element.dataset.i18n];
