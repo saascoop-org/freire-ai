@@ -4,7 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "test:smoke": "playwright test",
+    "test:landing": "playwright test -g \"landing\"",
+    "test:demo": "playwright test -g \"demo\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
   },
   "engines": {
     "node": ">=18"

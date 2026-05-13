@@ -2,6 +2,34 @@
 
 Run this check before submitting FreireAI.
 
+## Automated Smoke Check
+
+Run the automated smoke suite first:
+
+```powershell
+npm install
+npm run test:smoke
+```
+
+This validates:
+
+- The public landing page in PT-BR, EN, and ES.
+- Localized application name, video links, and screenshots for each language.
+- The landing page demo button.
+- The Render demo five-step local workflow.
+- Local/fallback generation.
+- Markdown export.
+- Gemma mode availability.
+
+For a live Gemma API call, run the demo smoke test with:
+
+```powershell
+$env:RUN_GEMMA_SMOKE='1'
+npm run test:demo
+```
+
+Manual checks below remain the final acceptance pass for content, copy, and judging-readiness.
+
 ## 1. Local Static Demo
 
 Open:

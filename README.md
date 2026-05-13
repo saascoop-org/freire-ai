@@ -90,6 +90,37 @@ The landing page links to the interactive Render demo at:
 https://freireai-literacy-companion-pilot.onrender.com/demo
 ```
 
+## Smoke Tests
+
+The public landing page and Render demo can be checked with Playwright:
+
+```powershell
+npm install
+npm run test:smoke
+```
+
+Useful focused checks:
+
+```powershell
+npm run test:landing
+npm run test:demo
+```
+
+By default, the tests use the public GitHub Pages and Render URLs. Override them when validating a local or preview deployment:
+
+```powershell
+$env:LANDING_URL='http://localhost:8080/'
+$env:DEMO_URL='http://localhost:8080/demo'
+npm run test:smoke
+```
+
+The Gemma smoke test validates that Gemma mode is selectable without making a live model call. To include one live Gemma request, provide the backend environment variables and run:
+
+```powershell
+$env:RUN_GEMMA_SMOKE='1'
+npm run test:demo
+```
+
 ## Environment
 
 The backend defaults to Google AI Studio / Google Generative Language API:
