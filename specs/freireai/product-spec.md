@@ -119,4 +119,3 @@ The first implementation can use deterministic local logic for demonstration. Pr
 - Given a class summary, the dashboard highlights learner voice, affective signals, and suggested educator actions.
 - Given a group of learners, the culture-circle view suggests prompts and peer collaboration patterns.
 - Every AI-generated output is labeled as a draft for educator review.
-

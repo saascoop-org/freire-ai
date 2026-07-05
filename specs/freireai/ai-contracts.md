@@ -195,4 +195,3 @@ Forbidden behavior:
 - Does not erase disagreement.
 - Suggests respectful facilitation moves.
 - Avoids punitive or surveillance framing.
-
