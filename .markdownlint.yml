@@ -1,3 +1,13 @@
+default: true
+
+# Long lines
 MD013: false
+
+# HTML
 MD033: false
+
+# First heading
 MD041: false
+
+# Bare URLs
+MD034: false
